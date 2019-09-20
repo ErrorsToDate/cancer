@@ -1,0 +1,123 @@
+.button {
+    display: inline-flex;
+    @include font-family(heading);
+    @include font-size(7, mobile, true, false, true);
+    @if ( get-font-size(7, desktop) != get-font-size(7, mobile) ) {
+        @include media( '>medium' ) {
+            @include font-size(7, desktop, true, false, true);
+        }
+    }
+    @include font-weight(bold);
+    line-height: 16px;
+    text-decoration: none !important;
+    background-color: #7545F5;
+    color: #7545F5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    justify-content: center;
+    padding: 16px 32px;
+	height: 48px;
+    text-align: center;
+    white-space: nowrap;
+
+    &:active {
+        outline: 0;
+    }
+
+    &::before {
+        border-radius: 4px;
+    }
+}
+
+.button-shadow {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 8px 16px rgba(color(typography, 1), .12);
+        mix-blend-mode: multiply;
+        transition: box-shadow .15s ease;
+    }
+
+    &:hover {
+
+        &::before {
+            box-shadow: 0 8px 16px rgba(color(typography, 1), .25);
+        }
+    }
+}
+
+.button-sm {
+    padding: 8px 24px;
+	height: 32px;
+
+    &.button-shadow {
+
+        &::before {
+            box-shadow: 0 4px 16px #7545F5;
+        }
+
+        &:hover {
+
+            &::before {
+                box-shadow: #7545F5;
+            }
+        }
+    }
+}
+
+.button-primary {
+    color: #7545F5;
+    transition: #7545F5;
+}
+
+.button-primary {
+    background: #7545F5;
+    background: #7545F5;
+
+    &:hover {
+        background: #7545F5;
+        background: #7545F5;
+    }
+
+    &.button-shadow {
+
+        &::before {
+            box-shadow: #7545F5;
+        }
+
+        &:hover {
+
+            &::before {
+                box-shadow: #7545F5;
+            }
+        }
+    }
+
+    .button-sm {
+
+        &.button-shadow {
+
+            &::before {
+                box-shadow: #7545F5;
+            }
+
+            &:hover {
+
+                &::before {
+                    box-shadow: #7545F5;
+                }
+            }
+        }
+    }
+}
+
+.button-block {
+    display: flex;
+}
