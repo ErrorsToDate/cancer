@@ -25,6 +25,48 @@
         }
 
 
+
+        .dropbtn {
+  background-image: url("./src/img/Purplin.jpg");
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  left: 650px;
+  top: -105px;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
 </style>
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
@@ -68,6 +110,20 @@
                             <center>
                                 <h1 class="hero-title h2-mobile mt-0 is-revealing">Donations</h1>
                                 <br>
+
+
+                                <div class="dropdown">
+                                        <button class="dropbtn">
+
+                                            <div class="menuLocation"><a href="./about.html">Learn More</a></div>
+
+                                        </button>
+                                        <div class="dropdown-content">
+                                          <a href="./index.html">Home</a>
+                                        </div>
+                                      </div>
+
+
                                 <p class="hero-paragraph is-revealing">All proceeds recevied are given to the <a href="https://www.cheshire-med.com/cancer_center.html" target="_blank">NCCC </a>. If you would like to write a cheque or donate items to <br> <i>Students For Hope</i>, or have any other questions, please contact us at 
                                     <b>donations.studentsforhope@gmail.com</b></p> 
                                 <!-- <p class="hero-paragraph is-revealing">Everything that we recieve is given to the <a href="https://www.cheshire-med.com/cancer_center.html" target="_blank">NCCC </a>to help benefit and support them. If you would like to donate items to Students For Hope, or have any questions on specific items, please contact us at our email  <b>donations.studentsforhope@gmail.com  </b> </p> -->
@@ -173,7 +229,8 @@
 															<br>
 															<font size="4">• Travel Tissues, Toothbrushes</font>
 															<br>
-															<br>
+                                                            <br>
+                                                            <font size="4">• Cheques</font>
                                                       </center>  
                                                         
                                                
@@ -279,7 +336,7 @@
                     </ul>
                     <div class="footer-copyright">&copy; 2019 SFC, Created by <a href="https://www.github.com/YaBoyWonder">Rahul Ch.</a>
                         <div class="footerEmail">
-                                <br><br>info.studentsforhope@gmail.com   </div>
+                            <br><br><a href="mailto:info.studentsforhope@gmail.com?Subject=StudentsForHope%20Information" target="_top">info.studentsforhope@gmail.com</a>   </div>
                             </div>
                 </div>
             </div>
